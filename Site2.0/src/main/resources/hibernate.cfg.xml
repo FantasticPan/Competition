@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+    <property name="hibernate.connection.provider_class">org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider</property>
+    <property name="hibernate.c3p0.min_size">3</property>
+    <property name="hibernate.c3p0.max_size">30</property>
+    <property name="hibernate.c3p0.timeout">1000</property>
+    <property name="hibernate.c3p0.max_statements">100</property>
+    <property name="hibernate.c3p0.idle_test_period">120</property>
+    <property name="hibernate.c3p0.acquire_increment">5</property>
+    <property name="c3p0.testConnectionOnCheckout">true</property>
+    <property name="c3p0.initialPoolSize">5</property>
+
+    <!--定义在从数据库获取新连接失败后重复尝试的次数 -->
+    <property name="acquireRetryAttempts">5</property>
+
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">lipan</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/competition?useUnicode=true&amp;characterEncoding=UTF-8</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    <property name="show_sql">false</property>
+    <property name="format_sql">true</property>
+    <property name="hbm2ddl.auto">update</property>
+    <mapping resource="Student.hbm.xml"/>
+    <mapping class="com.competition.Student"/>
+  </session-factory>
+</hibernate-configuration>

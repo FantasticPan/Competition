@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.competition" auto-import="true">
+
+    <class name="Student" table="student" schema="competition">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name1" column="name1"/>
+        <property name="number1" column="number1"/>
+        <property name="major1" column="major1"/>
+        <property name="grade1" column="grade1"/>
+        <property name="name2" column="name2"/>
+        <property name="number2" column="number2"/>
+        <property name="major2" column="major2"/>
+        <property name="grade2" column="grade2"/>
+        <property name="name3" column="name3"/>
+        <property name="number3" column="number3"/>
+        <property name="major3" column="major3"/>
+        <property name="grade3" column="grade3"/>
+        <property name="market" column="market"/>
+        <property name="description" column="description"/>
+        <property name="idea" column="idea"/>
+    </class>
+</hibernate-mapping>
